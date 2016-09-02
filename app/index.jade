@@ -1,0 +1,64 @@
+extends templates/base
+
+block content
+  header.header
+    .header__inner.container
+      .header__logo.logo
+      nav.header__nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__btn.btn.btn_dark
+              span Free trial
+          li.nav__item
+            a.nav__btn.btn
+              span Log in
+  .head
+    .head__inner.container
+      .head__headline.headline
+        h1
+          | Brain-stimulating game for your kids 
+          span.headline__light &
+          |  friends
+          small Helps to prepare for CogAT / NNAT tests
+
+      .promo
+        .promo__signup.signup
+          span.signup__title 1 FREE Target Plan upon sign up
+          form.signup__form.signup-form(method='POST', action='/sign_up')
+            .signup-form__row.signup-form__row_first
+              label.signup-form__label(for='email') Email
+              input.signup-form__input(type='email', name='email', placeholder='email@example.com')
+            .signup-form__row.signup-form__row_last
+              label.signup-form__label.signup-form__label_noborder(for='password') Password
+              input.signup-form__input.signup-form__input_noborder(type='password', name='password', placeholder='Easy to remember')
+            input.signup-form__btn.btn.btn_large.btn_full(type='submit', value='Get Started For FREE')
+          span.signup__info No credit card required.
+        .promo__preview
+          .macbook
+  
+  section.section.section_graphs
+    .section__inner.container
+      .section__left
+        .graph.graph_dark
+        .graph.graph_orange
+        .rounds
+          .rounds__item.round.round_cogat 1
+          .rounds__item.round.round_nnat
+      .section__right.section__vcenter
+        h2.section__title Boosting Your kids Brain Power
+        h3.section__subtitle Designed to be fun for the brain and exercise the neural pathways
+  
+  section.section.section_categories.section_center
+    .section__inner.section__inner_small.container
+      h2.section__title Accelerate brain work and prepare to CogAT
+      h3.section__subtitle 7 Mind categories
+        
+  section.section.section_levels
+    .section__inner.container
+      .section__left.section__vcenter
+        h2.section__title Play over 500 levels
+        h3.section__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        a.btn.btn_large
+          span Get started now
+      .section__right.section__vcenter
+        .levels
