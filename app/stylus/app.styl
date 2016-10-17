@@ -152,9 +152,8 @@ img
 
   &__hero
     position relative
-    height 100vh
-    background url('../images/careers__hero.jpg') center no-repeat
-    background-size cover
+    height 75vh
+    overflow hidden
 
     &:before
       content ' '
@@ -164,6 +163,16 @@ img
       bottom 0
       right 0
       background rgba(148,148,148, .6)
+      z-index 1
+
+    &-video
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      min-width 100%
+      min-height 100%
+      z-index 0
 
     &-container
       height 100%
@@ -178,18 +187,27 @@ img
     text-align center
 
     &-list
-      padding 2rem 0
+      padding 0
       margin 0
       list-style none
+      counter-reset ordered-list
 
     &-item
-      margin 2rem 0
+      position relative
+      font 2rem font-regular
+      color #4c4d4f
+      margin 6rem 0 1rem 0
 
-      &:first-child
-        margin-top 0
-
-      &:last-child
-        margin-bottom 0
+      &:before
+        content counter(ordered-list)
+        counter-increment ordered-list
+        position absolute
+        left 50%
+        top -3.6rem
+        transform translate(-50%, 0)
+        color #eaeaea
+        z-index -1
+        font 72px font-regular-italic
 
     &-number
       display block
@@ -277,19 +295,35 @@ img
       color #949494
 
   &__join
+    position relative
     text-align center
     margin-top 6rem
     height 50vh
-    background url('../images/careers__conclusion.jpg') center no-repeat
+    background url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123942/meltwater_office_new_york_bell.png') center no-repeat
+    background-position center top
     background-size cover
+    background-attachment fixed
+
+    &:before
+      content ' '
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background #4c4d4f
+      opacity .5
+      z-index 0
 
     &-container
+      position relative
       height 100%
 
       display flex
       flex-direction column
       align-items center
       justify-content center
+      z-index 1
 
     &_p
     &_h2
@@ -312,26 +346,20 @@ img
 
   &__list
     position relative
-    margin 4rem 0 0 0
-    padding 0
-    list-style none
-    height 80rem
+    width 100%
+    height 80vh
+    z-index 1
 
   &__item
     position absolute
     display inline-block
     padding 0.5rem
-    box-shadow 0 0 2rem rgba(0,0,0,.1)
+    border 1px solid #ccc
+    box-shadow 5px 5px 25px rgba(0, 0, 0, 0.25)
     background #fff
     transition box-shadow .15s ease-out, opacity .25s ease-out
-    z-index 2
-
-    &_active
-      visibility visible
-      opacity 1
-
-    &:hover
-      box-shadow 0 0 3rem rgba(0,0,0,.2)
+    opacity 0
+    transition opacity .15s ease-out
 
   &__img
     display block

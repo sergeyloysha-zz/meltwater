@@ -3,6 +3,7 @@ extends templates/base
 block content
   section.careers
     section.careers__hero
+      video.careers__hero-video(src="https://player.vimeo.com/external/122268146.hd.mp4?s=0e0550f0b692ff7993bcd2d9c323c0e639ae8042&profile_id=113", autoplay, muted, loop)
       .container.careers__hero-container
         h1.careers__h1 Work with Meltwater
         p.careers__p.careers__p_white.careers__p_hero Love what you do.
@@ -12,67 +13,59 @@ block content
       .container
         h2.careers__h2 Discover your potential
         p.careers__p.careers__p_light Meltwater is a place where you'll get to work with a smart group of people on<br/>the best new technology in the industry. Bring new ideas to the table, develop<br/>your strengths, and find new ones. We identify opportunity and potential for<br/>you to build your career.
-        ul.careers__discover-list
-          li.careers__discover-item
-            span.careers__discover-number 1
-            span.careers__discover-text Work with the best technology.
-          li.careers__discover-item
-            span.careers__discover-number 2
-            span.careers__discover-text Incredible people
-          li.careers__discover-item
-            span.careers__discover-number 3
-            span.careers__discover-text Make a difference
-          li.careers__discover-item
-            span.careers__discover-number 4
-            span.careers__discover-text Build your career
+        ol.careers__discover-list
+          li.careers__discover-item Work with the best technology
+          li.careers__discover-item Incredible people
+          li.careers__discover-item Make a difference
+          li.careers__discover-item Build your career
         .careers__discover-quote
           span.careers__discover-quote-text Rewarding work with amazing people. Build your career and<br/>challenge yourself every step of the way towards success.
     
     section.careers__feed
-      .container.container_large
+      .container
         h2.careers__h2 #meltwaterlife
-        .b-feed
-          ul.b-feed__list
-            li.b-feed__item.b-feed__item_1(data-item-id='1', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_2(data-item-id='2', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_3(data-item-id='3', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_4(data-item-id='4', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_5(data-item-id='5', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_6(data-item-id='6', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_7(data-item-id='7', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_8(data-item-id='8', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_9(data-item-id='9', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_10(data-item-id='10', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_11(data-item-id='11', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_12(data-item-id='12', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_13(data-item-id='13', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_14(data-item-id='14', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_15(data-item-id='15', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_16(data-item-id='16', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_17(data-item-id='17', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_18(data-item-id='18', data-speed='5')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_19(data-item-id='19', data-speed='1')
-              img.b-feed__img(src='')
-            li.b-feed__item.b-feed__item_20(data-item-id='20', data-speed='5')
-              img.b-feed__img(src='')
+      .b-feed
+        ul.b-feed__list
+          li.b-feed__item.b-feed__item_1(data-item-id='1', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_2(data-item-id='2', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_3(data-item-id='3', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_4(data-item-id='4', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_5(data-item-id='5', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_6(data-item-id='6', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_7(data-item-id='7', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_8(data-item-id='8', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_9(data-item-id='9', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_10(data-item-id='10', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_11(data-item-id='11', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_12(data-item-id='12', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_13(data-item-id='13', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_14(data-item-id='14', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_15(data-item-id='15', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_16(data-item-id='16', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_17(data-item-id='17', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_18(data-item-id='18', data-speed='5')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_19(data-item-id='19', data-speed='1')
+            img.b-feed__img(src='')
+          li.b-feed__item.b-feed__item_20(data-item-id='20', data-speed='5')
+            img.b-feed__img(src='')
     
     section.careers__brands
       .container
