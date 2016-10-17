@@ -21,10 +21,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+    font-family: 'brown-regular-italic';
+    font-style: normal;
+    src: url(https://d1bile9su2eskg.cloudfront.net/wp-content/themes/meltwater/fonts/brown-regular-italic-webfont.eot);
+    src: url(https://d1bile9su2eskg.cloudfront.net/wp-content/themes/meltwater/fonts/brown-regular-italic-webfont.eot?#iefix) format('embedded-opentype'), url(https://d1bile9su2eskg.cloudfront.net/wp-content/themes/meltwater/fonts/brown-regular-italic-webfont.woff) format('woff'), url(https://d1bile9su2eskg.cloudfront.net/wp-content/themes/meltwater/fonts/brown-regular-italic-webfont.ttf) format('truetype'), url(https://d1bile9su2eskg.cloudfront.net/wp-content/themes/meltwater/fonts/brown-regular-italic-webfont.svg#web) format('svg')
+}
 
 font-base = brown-regular, Helvetica, Arial, sans-serif
 font-bold = brown-bold
 font-regular = brown-regular
+font-light = brown-light
+font-regular-italic = brown-regular-italic
 
 size-font = 1.4rem
 size-line = 2rem
@@ -60,14 +68,6 @@ clearfix()
   &:active
     -webkit-tap-highlight-color: alpha(color-white, 0)
 
-::selection
-  background alpha(#28bbbb, 0.05)
-
-input
-textarea
-  &:focus
-    outline 0
-
 html
   font-size 62.5%
   text-rendering optimizeLegibility
@@ -86,238 +86,254 @@ img
   max-width 100%
   height auto
 
-a
-a:link
-a:active
-a:visited
-  text-decoration none
-  cursor pointer
+.container
+  max-width 98rem
+  padding-left 1.5rem
+  padding-right 1.5rem
+  margin-left auto
+  margin-right auto
 
-.owl-carousel
-  display none
-  position relative
-  width 100%
-  -ms-touch-action pan-y
+  &_large
+    max-width 120rem
 
-  .owl-wrapper
-    display none
-    position relative
-    transform translate3d(0px, 0px, 0px)
+.careers
 
-    &:after
-      content "."
-      display block
-      clear both
-      visibility hidden
-      line-height 0
-      height 0
+  &__h1
+    font-size 4.4rem
+    line-height 5rem
+    font-family font-regular
+    color #fff
+    margin 0.5rem 0
 
-  .owl-wrapper-outer
-    position relative
-    width 100%
+  &__h2
+    font-size 3.2rem
+    line-height 4rem
+    font-family font-regular
+    color #4C4D4F
+    margin 1rem 0
 
-    &.autoHeight
-      transition height 500ms ease-in-out
+    &_white
+      color #fff
 
-  .owl-item
-    float left
+  &__p
+    font-size 2rem
+    line-height 2.4rem
+    font-family font-regular
+    color #4C4D4F
+    margin 1.5rem 0
 
-.owl-controls .owl-page,
-.owl-controls .owl-buttons div
-  cursor pointer
+    &_light
+      font-family font-light
 
-.owl-controls
-  user-select none
-  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    &_white
+      color #fff
 
-.owl-carousel  .owl-wrapper,
-.owl-carousel  .owl-item
-  -webkit-backface-visibility hidden
-  -moz-backface-visibility hidden
-  -ms-backface-visibility hidden
-  -webkit-transform translate3d(0,0,0)
-  -moz-transform translate3d(0,0,0)
-  -ms-transform translate3d(0,0,0)
+    &_hero
+      margin-top 0
 
-
-
-.case-studies-hero
-  position relative
-  border-bottom 1px solid #949494
-  background color-white
-
-  .owl-buttons
-    position absolute
-    z-index 4
-    top 50%
-    left 50%
-    width 950px
-    height 50px
-    transform translate(-50%,-50%)
-    pointer-events none
-
-  .owl-next
-  .owl-prev
-    position absolute
-    top 0
-    display block
-    width 11px
-    height 50px
-    pointer-events auto
-    opacity .8
-    transition opacity .15s
+  &__btn
+    display inline-block
+    font-size 1.6rem
+    line-height 2rem
+    font-family font-light
+    color #28BBBB
+    background rgba(0,0,0,.25)
+    border 1px solid #28BBBB
+    padding 0.8rem 1.5rem
+    text-decoration none
+    cursor pointer
+    border-radius 3px
+    transition background .15s
 
     &:hover
-      opacity 1
+      background rgba(0,0,0,.35)
+    &:active
+      background rgba(0,0,0,.5)
 
-  .owl-prev
-    left -10rem
-    background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSI1MHB4IiB2aWV3Qm94PSIwIDAgMTEgNTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPiAgICAgICAgPHRpdGxlPlJlY3RhbmdsZSA1MyArIFJlY3RhbmdsZSA1MzwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPiAgICAgICAgPGcgaWQ9IkNhc2UtU3R1ZGllcy1MYW5kaW5nLUhvdmVyIiBza2V0Y2g6dHlwZT0iTVNBcnRib2FyZEdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTM0LjAwMDAwMCwgLTIwMC4wMDAwMDApIiBmaWxsPSIjNEM0RDRGIj4gICAgICAgICAgICA8ZyBpZD0iUmVjdGFuZ2xlLTUzLSstUmVjdGFuZ2xlLTUzIiBza2V0Y2g6dHlwZT0iTVNMYXllckdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzQuMDAwMDAwLCAyMDAuMDAwMDAwKSI+ICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik05Ljk2Mjk0MTMxLDAuMTI2MjQwNzMxIEwxMC42MjA1MTg1LDAuMzkxOTE5MTY2IEwwLjY1NzU3NzIwMiwyNS4wNTEwNjQyIEwwLDI0Ljc4NTM4NTggTDkuOTYyOTQxMzEsMC4xMjYyNDA3MzEgTDkuOTYyOTQxMzEsMC4xMjYyNDA3MzEgWiIgaWQ9IlJlY3RhbmdsZS01MyIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+PC9wYXRoPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwyNS4yMTQ2MTQyIEwwLjY1NzU3NzIwMiwyNC45NDg5MzU4IEwxMC42MjA1MTg1LDQ5LjYwODA4MDggTDkuOTYyOTQxMzEsNDkuODczNzU5MyBMMCwyNS4yMTQ2MTQyIEwwLDI1LjIxNDYxNDIgWiIgaWQ9IlJlY3RhbmdsZS01MyIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+PC9wYXRoPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
-    background-repeat no-repeat
-    background-position 50%
-    background-size contain
-
-  .owl-next
-    right -10rem
-    background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSI1MHB4IiB2aWV3Qm94PSIwIDAgMTEgNTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPiAgICAgICAgPHRpdGxlPlJlY3RhbmdsZSA1MyArIFJlY3RhbmdsZSA1MzwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPiAgICAgICAgPGcgaWQ9IkNhc2UtU3R1ZGllcy1MYW5kaW5nLUhvdmVyIiBza2V0Y2g6dHlwZT0iTVNBcnRib2FyZEdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTI5NS4wMDAwMDAsIC0yMDAuMDAwMDAwKSIgZmlsbD0iIzRDNEQ0RiI+ICAgICAgICAgICAgPGcgaWQ9IlJlY3RhbmdsZS01My0rLVJlY3RhbmdsZS01MyIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTMwMC4xMzgyOTgsIDIyNS4wMDAwMDApIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMzAwLjEzODI5OCwgLTIyNS4wMDAwMDApIHRyYW5zbGF0ZSgxMjk0LjYzODI5OCwgMjAwLjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOS45NjI5NDEzMSwwLjEyNjI0MDczMSBMMTAuNjIwNTE4NSwwLjM5MTkxOTE2NiBMMC42NTc1NzcyMDIsMjUuMDUxMDY0MiBMMCwyNC43ODUzODU4IEw5Ljk2Mjk0MTMxLDAuMTI2MjQwNzMxIEw5Ljk2Mjk0MTMxLDAuMTI2MjQwNzMxIFoiIGlkPSJSZWN0YW5nbGUtNTMiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4gICAgICAgICAgICAgICAgPHBhdGggZD0iTTAsMjUuMjE0NjE0MiBMMC42NTc1NzcyMDIsMjQuOTQ4OTM1OCBMMTAuNjIwNTE4NSw0OS42MDgwODA4IEw5Ljk2Mjk0MTMxLDQ5Ljg3Mzc1OTMgTDAsMjUuMjE0NjE0MiBMMCwyNS4yMTQ2MTQyIFoiIGlkPSJSZWN0YW5nbGUtNTMiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=')
-    background-repeat no-repeat
-    background-position 50%
-    background-size contain
-
-  &__list
-    margin 0
-    padding 0
-    list-style none
-
-  &__item
+  &__hero
     position relative
+    height 100vh
+    background url('../images/careers__hero.jpg') center no-repeat
+    background-size cover
 
-  &__slide
-    position relative
-    clearfix()
-    width 100%
-    max-width 950px
-    margin 0 auto
-    padding 5rem 0
+    &:before
+      content ' '
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right 0
+      background rgba(148,148,148, .6)
 
-    +mediaMin(size-m)
-      height 35rem
+    &-container
+      height 100%
+      position relative
+      z-index 1
+      display flex
+      flex-direction column
+      justify-content center
 
-    &-left
-    &-right
-      width 100%
-      padding 0 1.5rem
+  &__discover
+    padding-top 6rem
+    text-align center
 
-      +mediaMin(size-m)
-        width 50%
-        float left
-
-    &-head
-      font-family brown-regular
-      font-size 2rem
-      line-height 2.8rem
+    &-list
+      padding 2rem 0
       margin 0
-      color #4c4d4f
+      list-style none
 
-    &-title
-      font-family brown-bold
-      font-size 3.4rem
-      line-height 4.8rem
-      margin 0
-      color #4c4d4f
+    &-item
+      margin 2rem 0
+
+      &:first-child
+        margin-top 0
+
+      &:last-child
+        margin-bottom 0
+
+    &-number
+      display block
+      font-size 7.2rem
+      line-height 7.2rem
+      color #EAEAEA
+      font-family font-regular-italic
 
     &-text
-      font-family brown-light
+      display block
       font-size 2rem
-      line-height 2.8rem
-      color #4c4d4f
-      margin 0 0 1.5rem 0
+      line-height 2.4rem
+      font-family font-regular
+      color #4C4D4F
+      margin-top -4rem
 
-    &-link
-      position relative
+    &-quote
+      margin-top 4rem
       display inline-block
-      font-family brown-regular
-      font-size 2rem
-      line-height 2.8rem
-      color #28bbbb
+      border-top 1px solid #979797
+      border-bottom 1px solid #979797
+      padding 2rem
 
-      &:after
-        position relative
-        content '›'
-        left .5rem
-        transition left .15s
+      &-text
+        font-family font-regular-italic
+        font-size 2rem
+        line-height 2.4rem
 
-      &:hover:after
-        left .8rem
+  &__brands
+    padding-top 6rem
+    text-align center
 
-@keyframes heroScreenAnimation {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, -25px);
-            transform: translate3d(0, 0, -25px);
-  }
-}
+    &-list
+      margin 6rem 0 0 0
+      padding 0
+      list-style none
+      display flex
+      align-items center
+      justify-content center
 
-.screens
-  display none
-  perspective 5000px
-  transform-style preserve-3d
+    &-item
+      margin 0 4rem
 
-  +mediaMin(size-m)
-    display block
+  &__benefits
+    padding-top 6rem
+    text-align center
 
-  &__isometric
+    &-list
+      text-align left
+      margin 6rem 0 0 0
+      padding 0
+      list-style none
+
+      display flex
+
+    &-item
+      width 20%
+      margin-top 2rem
+      margin-bottom 2rem
+      margin-right 2rem
+
+      &:last-child
+        margin-right 0
+
+    &-icon
+      display block
+      height 5rem
+
+      svg
+        display block
+
+    &-title
+      display block
+      font-size 1.6rem
+      line-height 2rem
+      font-family font-regular
+      color #4C4D4F
+      margin 0.5rem 0
+
+    &-text
+      margin 0.5rem 0
+      font-family font-regular
+      font-size 1.4rem
+      line-height 1.8rem
+      color #949494
+
+  &__join
+    text-align center
+    margin-top 6rem
+    height 50vh
+    background url('../images/careers__conclusion.jpg') center no-repeat
+    background-size cover
+
+    &-container
+      height 100%
+
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+
+    &_p
+    &_h2
+      margin 0.1rem 0
+
+    &_h2
+      font-size 3.4rem
+
+  &__feed
+    padding-top 6rem
+
+.b-feed
+  padding 40px 0
+
+  &__title
+    font-size 4.6rem
+    font-weight 300
+    margin 0
+    color #4C4D4F
+
+  &__list
     position relative
-    top 0
-    left 0
-    transform-style preserve-3d
-    transition all 0.3s ease
+    margin 4rem 0 0 0
+    padding 0
+    list-style none
+    height 80rem
 
-    &:nth-of-type(1)
-      transform translate3d(0, 0, 0) rotate3d(1, 1, 0, 45deg) scale(1.5)
-
-  &__rotate
-    position relative
-    transform rotate3d(0, 0, -1, 20deg) scale(1)
-    transform-style preserve-3d
-
-  &__screen
-    display none
+  &__item
     position absolute
-    box-shadow 0 0 100px rgba(0, 0, 0, 0.25)
+    display inline-block
+    padding 0.5rem
+    box-shadow 0 0 2rem rgba(0,0,0,.1)
+    background #fff
+    transition box-shadow .15s ease-out, opacity .25s ease-out
+    z-index 2
 
-    &:nth-of-type(1)
-      left 0
-      bottom -5%
-      transform translate3d(0, 0, 25px)
-      box-shadow 0 0 100px rgba(0, 0, 0, 0.25)
+    &_active
+      visibility visible
+      opacity 1
 
-    &:nth-of-type(2)
-      visibility hidden
-      left 110%
-      bottom -15%
-      opacity .5
+    &:hover
+      box-shadow 0 0 3rem rgba(0,0,0,.2)
 
-      +mediaMin(size-l)
-        visibility visible
-
-    &:nth-of-type(3)
-      top -100%
-      opacity .5
-
-    &:nth-of-type(4)
-      position relative
-      visibility hidden
-
-.owl-item.active
-  .screens__screen
+  &__img
     display block
-
-    &:nth-of-type(1)
-      animation heroScreenAnimation 1s ease 0.4s both
-
-    &:nth-of-type(2)
-      animation heroScreenAnimation 1s ease 0.2s both
-
-    &:nth-of-type(3)
-      animation heroScreenAnimation 1s ease 0s both
+    width 100%
+    height auto
