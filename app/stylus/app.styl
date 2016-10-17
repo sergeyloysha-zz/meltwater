@@ -335,6 +335,11 @@ img
   &__feed
     padding-top 6rem
 
+  &__people
+    padding-top 16rem
+    text-align center
+    border-bottom 1px solid #979797
+
 .b-feed
   padding 40px 0
 
@@ -349,6 +354,10 @@ img
     width 100%
     height 80vh
     z-index 1
+
+    margin 0
+    padding 0
+    list-style none
 
   &__item
     position absolute
@@ -365,3 +374,160 @@ img
     display block
     width 100%
     height auto
+
+.b-people
+  margin-top 5rem
+  display flex
+  &__col
+    position relative
+    width 50%
+    min-height 45rem
+    text-align left
+    display flex
+    flex-direction column
+
+    &_left
+      position relative
+
+      &:after
+        content ' '
+        position absolute
+        top 40%
+        left 50%
+        transform translate(-50%, -40%)
+        width 415px
+        height 240px
+        background url('../images/careers__photo-map.png') center no-repeat
+        z-index -1
+
+    &_right
+      align-items center
+      justify-content flex-end
+
+      &:after
+        content ' '
+        position absolute
+        bottom 0
+        left 50%
+        margin-left -302.5px
+
+        width 605px
+        height 429px
+        background url('../images/careers__photo-bg.png') center no-repeat
+        z-index -1
+
+  &__photo
+    display block
+
+  &__name
+    margin-top 7rem
+
+  &__text
+    font-size 1.6rem
+    line-height 2rem
+    color #4C4D4F
+    font-family font-regular
+
+  &__journey
+    margin-top 1.5rem
+
+  &__timeline
+    margin-top 16rem
+    position relative
+    width 37rem
+    height 0.4rem
+    background #EAEAEA
+
+    &-point
+      position absolute
+      top -0.6rem
+      width 1.5rem
+      height 1.5rem
+      border-radius 50%
+      background #eaeaea
+      cursor pointer
+      transition background .35s
+
+      &_active
+        background #ccc
+        &:before
+          content ' '
+          position absolute
+          display block
+          top -2.3rem
+          left 50%
+          margin-left -1.2rem
+          width 2.6rem
+          height 1.2rem
+          background url('../images/careers__arrow.svg') center no-repeat
+          z-index 2
+
+        .b-people__timeline-year
+          color #000
+
+
+      &_1
+        left 2rem
+      &_2
+        left 9rem
+      &_3
+        left 16rem
+      &_4
+        left 23rem
+      &_5
+        left 30rem
+      &_6
+        left 37rem
+
+    &-year
+      position absolute
+      top 3rem
+      left -50%
+      transform translateY(-50%)
+      transition color .15s
+
+    &-hover
+      position absolute
+      bottom 3rem
+      left 0
+      right 0
+      border-bottom 1px solid #949494
+      opacity 0
+      visibility hidden
+      transition opacity .35s ease-out
+
+      &_active
+        opacity 1
+        visibility visible
+
+    &-position
+      position absolute
+      left 0
+      bottom 0.5rem
+
+      h3
+        display block
+        margin 0
+        font-family font-light
+        font-size 2rem
+        line-height 2rem
+        color #949494
+
+      span
+        display block
+        margin 0
+        font-family font-regular
+        font-size 1.1rem
+        line-height 1.3rem
+        color #4C4D4F
+        text-transform uppercase
+
+    &-description
+      position absolute
+      right 4rem
+      bottom 0.5rem
+
+      font-family font-regular
+      font-size 1.2rem
+      line-height 1.6rem
+      color #4C4D4F

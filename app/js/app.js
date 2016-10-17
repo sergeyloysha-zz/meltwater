@@ -736,4 +736,12 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
   sr.reveal('.careers__discover-item', {reset:true}, 100);
   sr.reveal('.careers__brands-item', {reset:true}, 100);
   sr.reveal('.careers__benefits-item', {reset:true}, 100);
+
+  $('.b-people__timeline-point').on('click', function(e) {
+    e.preventDefault();
+    $(this).addClass('b-people__timeline-point_active').siblings().removeClass('b-people__timeline-point_active');
+    var $hover = $(this).prev();
+    $hover.addClass('b-people__timeline-hover_active').siblings().removeClass('b-people__timeline-hover_active');
+
+  })
 })(jQuery);
