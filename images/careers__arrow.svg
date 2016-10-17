@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="12px" viewBox="0 0 24 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Careers-page" transform="translate(-507.000000, -3410.000000)">
+            <g id="meet-us" transform="translate(0.000000, 2984.000000)">
+                <g id="meet-belen" transform="translate(0.000000, 89.000000)">
+                    <g id="timeline" transform="translate(250.000000, 283.000000)">
+                        <g id="timeline-item" transform="translate(16.000000, 0.000000)">
+                            <g id="Group-6" transform="translate(241.000000, 54.000000)">
+                                <rect id="Rectangle-11" fill="#FFFFFF" x="2" y="2" width="20" height="10"></rect>
+                                <path d="M12,12 L23,1" id="Line" stroke="#949494" stroke-linecap="square"></path>
+                                <path d="M1,1 L12,12" id="Line" stroke="#949494" stroke-linecap="square"></path>
+                                <rect id="Rectangle-10" fill="#FFFFFF" x="0" y="0" width="24" height="2"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -507,6 +507,11 @@ img {
 .careers__feed {
   padding-top: 6rem;
 }
+.careers__people {
+  padding-top: 16rem;
+  text-align: center;
+  border-bottom: 1px solid #979797;
+}
 .b-feed {
   padding: 40px 0;
 }
@@ -521,6 +526,9 @@ img {
   width: 100%;
   height: 80vh;
   z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .b-feed__item {
   position: absolute;
@@ -537,4 +545,178 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+.b-people {
+  margin-top: 5rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.b-people__col {
+  position: relative;
+  width: 50%;
+  min-height: 45rem;
+  text-align: left;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.b-people__col_left {
+  position: relative;
+}
+.b-people__col_left:after {
+  content: ' ';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  width: 415px;
+  height: 240px;
+  background: url("../images/careers__photo-map.png") center no-repeat;
+  z-index: -1;
+}
+.b-people__col_right {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.b-people__col_right:after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -302.5px;
+  width: 605px;
+  height: 429px;
+  background: url("../images/careers__photo-bg.png") center no-repeat;
+  z-index: -1;
+}
+.b-people__photo {
+  display: block;
+}
+.b-people__name {
+  margin-top: 7rem;
+}
+.b-people__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #4c4d4f;
+  font-family: brown-regular;
+}
+.b-people__journey {
+  margin-top: 1.5rem;
+}
+.b-people__timeline {
+  margin-top: 16rem;
+  position: relative;
+  width: 37rem;
+  height: 0.4rem;
+  background: #eaeaea;
+}
+.b-people__timeline-point {
+  position: absolute;
+  top: -0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #eaeaea;
+  cursor: pointer;
+  transition: background 0.35s;
+}
+.b-people__timeline-point_active {
+  background: #ccc;
+}
+.b-people__timeline-point_active:before {
+  content: ' ';
+  position: absolute;
+  display: block;
+  top: -2.3rem;
+  left: 50%;
+  margin-left: -1.2rem;
+  width: 2.6rem;
+  height: 1.2rem;
+  background: url("../images/careers__arrow.svg") center no-repeat;
+  z-index: 2;
+}
+.b-people__timeline-point_active .b-people__timeline-year {
+  color: #000;
+}
+.b-people__timeline-point_1 {
+  left: 2rem;
+}
+.b-people__timeline-point_2 {
+  left: 9rem;
+}
+.b-people__timeline-point_3 {
+  left: 16rem;
+}
+.b-people__timeline-point_4 {
+  left: 23rem;
+}
+.b-people__timeline-point_5 {
+  left: 30rem;
+}
+.b-people__timeline-point_6 {
+  left: 37rem;
+}
+.b-people__timeline-year {
+  position: absolute;
+  top: 3rem;
+  left: -50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: color 0.15s;
+}
+.b-people__timeline-hover {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #949494;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease-out;
+}
+.b-people__timeline-hover_active {
+  opacity: 1;
+  visibility: visible;
+}
+.b-people__timeline-position {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+}
+.b-people__timeline-position h3 {
+  display: block;
+  margin: 0;
+  font-family: brown-light;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #949494;
+}
+.b-people__timeline-position span {
+  display: block;
+  margin: 0;
+  font-family: brown-regular;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  color: #4c4d4f;
+  text-transform: uppercase;
+}
+.b-people__timeline-description {
+  position: absolute;
+  right: 4rem;
+  bottom: 0.5rem;
+  font-family: brown-regular;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #4c4d4f;
 }
